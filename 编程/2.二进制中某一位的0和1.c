@@ -7,7 +7,7 @@ void binaryOne(int a)
 	printf("你需要将第几位变成1:>");
 	int n;
 	scanf("%d", &n);
-	a |= (1<<(n-1));
+	a |= (1 << (n - 1));
 	printf("你得到了%#X\n",a);
 }
 

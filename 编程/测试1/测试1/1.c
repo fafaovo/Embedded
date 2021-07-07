@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 //将第n位变成1
 void binaryOne(int a)
 {
