@@ -7,12 +7,14 @@ void test01()
 {
 	char buf_A[30] = { 0 };
 	char buf_B[30] = { 0 };
-	//fgets(buf_B,30,stdin);
-	//fgets(buf_A,30,stdin);
+	
+	
 	printf("请输入子串\n");
-	scanf("%s",buf_B);
+	//fgets(buf_B, 30, stdin);
+	scanf("%[^\n]%*c",buf_B);
 	printf("请输入主串\n");
-	scanf("%s",buf_A);
+	//fgets(buf_A, 30, stdin);
+	scanf("%[^\n]%*c",buf_A); //使用正则表达式让scanf只识别\n
 	int Asize = strlen(buf_A); //A字符串的大小
 	int Bsize = strlen(buf_B); //B字符串的大小
 	char * pbuf_A = buf_A;
