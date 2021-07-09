@@ -4,7 +4,8 @@
 
 int main(int argc,int argv[])
 {
-	test03();
+	test07();
+	
 
 	system("pause");
 	return 0;

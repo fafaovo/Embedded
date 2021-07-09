@@ -36,11 +36,11 @@ void test01()
 */
 void test02()
 {
-	int bonus1 = 100000 * 0.1;  //10w
-	int bonus2 = bonus1 + 100000 * 0.075; //10w-20w
-	int bonus3 = bonus2 + 200000 * 0.05;  //20w-40w
-	int bonus4 = bonus3 + 200000 * 0.03;  //40w-60w
-	int bonus5 = bonus4 + 400000 * 0.015; //60w-100w
+	double bonus1 = 100000 * 0.1;  //10w
+	double  bonus2 = bonus1 + 100000 * 0.075; //10w-20w
+	double  bonus3 = bonus2 + 200000 * 0.05;  //20w-40w
+	double  bonus4 = bonus3 + 200000 * 0.03;  //40w-60w
+	double  bonus5 = bonus4 + 400000 * 0.015; //60w-100w
 	long meney;
 	cin >> meney;
 	if (meney <= 100000)
@@ -69,7 +69,100 @@ void test02()
 void test03()
 {
 	int y, m, d;
-	//scanf("%d.%d.%d", &y, &m, &d);
-	cin >> y >> "." >> m >> "." >> d;
-	int a = 0;
+	printf("\n请输入年、月、日，格式为：年,月,日（2015,12,10）\n");
+	scanf("%d,%d,%d", &y, &m, &d);
+	//cin >> y >> "." >> m >> "." >> d;
+	int a = d; //求月的天数
+	switch (m)	
+	{
+	case 12: a += 30;
+	case 11: a += 31; 
+	case 10: a += 30; 
+	case 9: a += 31; 
+	case 8: a += 31; 
+	case 7: a += 30; 
+	case 6: a += 31;
+	case 5: a += 30;
+	case 4: a += 31;
+	case 3: a += 28;
+	case 2: a += 31;
+	case 1: a += 0;
+		break;
+	default:
+		break;
+	}
+	if (a != d)
+	{
+		if (m > 2)
+		{
+			if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+			{
+				a += 1;
+			}
+		}
+		printf("你输入的%d年%d月%d日,是这个月的第%d天", y, m, d, a);
+	}
+	
+
+
+}
+//题目：输入三个整数x,y,z，请把这三个数由小到大输出。
+void exChange(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+void test04()
+{
+	int x, y, z;
+	printf("输入三个整数x,y,z，请把这三个数由小到大输出,格式x, y, z\n");
+	scanf("%d%d%d", &x, &y, &z);
+	if (x > y)
+		exChange(&x, &y);
+	if (x > z)
+		exChange(&x, &z);
+	if (y > z)
+		exChange(&y, &z);	
+	printf("从小到大分别是%d,%d,%d\n", x, y, z);
+}
+//用*号输出字母C的图案。
+void test05()
+{
+	printf(" ****\n");
+	printf("*    \n");
+	printf("*    \n");
+	printf("*    \n");
+	printf(" ****\n");
+}
+//九九乘法表
+void test06()
+{
+	for (int i = 1; i < 10; i++)
+	{
+		for (int j = 1; j < i + 1; j++)
+		{
+			printf(" %d*%d=%-2d", i, j, i*j);
+		}
+		printf("\n");
+	}
+}
+//要求输出国际象棋棋盘
+void test07()
+{
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			if ((i + j) % 2 == 0)
+			{
+				printf("%c%c", 0xa8, 0x80);
+			}
+			else
+			{
+				printf("%c%c",' ',' ');
+			}
+		}
+		printf("\n");
+	}
 }

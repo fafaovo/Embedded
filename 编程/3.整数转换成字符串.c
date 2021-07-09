@@ -2,11 +2,11 @@
 
 void test01()
 {
-	//½«Ò»¸öÕûÊý×ª»»³É×Ö·û´®
+	//å°†ä¸€ä¸ªæ•´æ•°è½¬æ¢æˆå­—ç¬¦ä¸²
 	char str[20] = { 0 };
 	int a;
 	int i = 0;
-	printf("ÇëÊäÈëÒ»¸öÕûÊý");
+	printf("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°");
 	scanf("%d", &a);
 	while (a)
 	{
@@ -15,9 +15,9 @@ void test01()
 		a /= 10;
 	}
 	str[i] = '\0';
-	char *start = &str[0];  //¶¨ÒåÒ»¸öÊý×éÍ·
-	char *end = &str[i - 1];  //¶¨ÒåÒ»¸öÊý×éÎ²
-	while (end > start)  //µ¹ÖÃÕû¸öcharÀàÐÍµÄÊý×é
+	char *start = &str[0];  //å®šä¹‰ä¸€ä¸ªæ•°ç»„å¤´
+	char *end = &str[i - 1];  //å®šä¹‰ä¸€ä¸ªæ•°ç»„å°¾
+	while (end > start)  //å€’ç½®æ•´ä¸ªcharç±»åž‹çš„æ•°ç»„
 	{
 		char tmp = *start;
 		*start = *end;
