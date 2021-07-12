@@ -147,22 +147,38 @@ void test06()
 		printf("\n");
 	}
 }
-//要求输出国际象棋棋盘
+/*
+题目：古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月
+后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？
+*/
+int fbnq(int n)
+{
+	if (n <= 1)
+		return n == 0 ? 0 : 1;
+	else
+		return fbnq(n - 1) + fbnq(n - 2);
+}
+
 void test07()
 {
-	for (int i = 0; i < 9; i++)
+	cout << fbnq(20) << endl;
+}
+
+void test08()
+{
+	for (int i = 101; i <= 202;i ++)
 	{
-		for (int j = 0; j < 9; j++)
+		for (int j = i; j < sqrt(i);j ++)
 		{
-			if ((i + j) % 2 == 0)
+			if (j % 2 == 1)
 			{
-				printf("%c%c", 0xa8, 0x80);
-			}
-			else
-			{
-				printf("%c%c",' ',' ');
+				cout << j << endl;
 			}
 		}
-		printf("\n");
+
 	}
+
+
+
+
 }

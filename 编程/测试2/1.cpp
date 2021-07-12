@@ -83,7 +83,13 @@ void test04()
 				count++;
 			}
 			else  //如果不相等了就跳出循环
-				break;	
+			{
+				cur = curNext;
+				cur--;
+				break;
+			}
+
+				
 		}
 		//判断记录的count是否大于max_count
 		if (count > max_count)
@@ -163,7 +169,7 @@ void test03()
 
 int main()
 {
-	test01();
+	test04();
 
 
 	return 0;

@@ -1,4 +1,4 @@
-﻿生成启动时间为 2021/7/9 22:24:26。
+﻿生成启动时间为 2021/7/11 10:15:18。
      1>项目“F:\GitHub\Embedded\编程\测试2\测试2.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Visio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 1.cpp
@@ -10,4 +10,4 @@
 
 生成成功。
 
-已用时间 00:00:00.68
+已用时间 00:00:00.66
