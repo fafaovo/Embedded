@@ -10,10 +10,8 @@ void test01()
 	
 	
 	printf("请输入子串\n");
-	//fgets(buf_B, 30, stdin);
 	scanf("%[^\n]%*c",buf_B);
 	printf("请输入主串\n");
-	//fgets(buf_A, 30, stdin);
 	scanf("%[^\n]%*c",buf_A); //使用正则表达式让scanf只识别\n
 	int Asize = strlen(buf_A); //A字符串的大小
 	int Bsize = strlen(buf_B); //B字符串的大小

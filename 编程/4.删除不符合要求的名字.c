@@ -44,24 +44,24 @@ void test03()
 		if (a == 0 && A == 0)
 		{
 			printf("第%d个名字缺失字母\n",i+1);
-			continue;
 		}
-		if (a == 0)
+		else if (a == 0)
 		{
 			printf("第%d个名字缺失小写字母,请重新输入\n", i + 1);
-			continue;
 		}
-		if (A == 0)
+		else if (A == 0)
 		{
 			printf("第%d个名字缺失大写字母,请重新输入\n", i + 1);
-			continue;
 		}
 		if (s == 0)
 		{
 			printf("第%d个名字缺失数字,请重新输入\n", i + 1);
-			continue;
 		}
-		printf("第%d个名字无误\n", i + 1);
+		if (a == 1 && s == 1 && A == 1)
+		{
+			printf("第%d个名字无误\n", i + 1);
+		}
+		
 	}
 	
 }

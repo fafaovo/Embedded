@@ -166,17 +166,7 @@ void test07()
 
 void test08()
 {
-	for (int i = 101; i <= 202;i ++)
-	{
-		for (int j = i; j < sqrt(i);j ++)
-		{
-			if (j % 2 == 1)
-			{
-				cout << j << endl;
-			}
-		}
-
-	}
+	
 
 
 
